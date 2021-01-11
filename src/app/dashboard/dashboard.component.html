@@ -1,0 +1,22 @@
+<!--<app-hero-search></app-hero-search> -->
+<div class="row">
+    <div class="col-9">
+        <h3 class="display-4 text-center">Top Heroes</h3>
+        <div class="row mt-5">
+            <div *ngFor="let hero of heroes">
+                <div class="col ml-3">
+                    <div class="card static-card">
+                        <img class="card-img-top" src="{{hero.image}}" alt="{{hero.name}} image">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-dark font-weight-bold">{{hero.name}}</h5>
+                            <a routerLink="/detail/{{hero.id}}" class="btn btn-primary">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <app-heroes></app-heroes>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center">
+<div class="col-sm-5">
+    <div *ngIf="hero">
+        <h2 class="display-3">{{hero.name | uppercase}} details</h2>
+        <div><span class="font-weight-bold">Id: </span>{{hero.id}}</div>
+        <div class="form-group">
+            <label class="font-weight-bold">Name: </label>
+            <input class="form-control" [(ngModel)]="hero.name" placeholder="Enter the name here" />
+        </div>
+        <div class="form-group">
+            <label class="font-weight-bold">Image URL: </label>
+            <input class="form-control" [(ngModel)]="hero.image" placeholder="Enter the name here" />
+
+        </div>
+        <div class="button-group">
+            <button (click)="goBack()" class="btn btn-primary">Cancel</button>
+            <button (click)="save()" class="btn btn-primary float-right">Save</button>
+        </div>
+    </div>
+</div>
+</div>

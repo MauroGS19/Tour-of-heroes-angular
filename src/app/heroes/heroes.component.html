@@ -1,0 +1,21 @@
+
+<div class="col-12">
+    <h2 class="display-4">My Heroes</h2>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <input #heroName class="form-control" placeholder="New hero"/>
+        </div>
+        <button class="btn btn-primary ml-1" (click)="add(heroName.value); heroName.value=''">
+            Add
+        </button>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let hero of heroes">
+            <a class="text-dark" routerLink="/detail/{{hero.id}}">
+                <span class="text-dark font-weight-bold">{{hero.id}}</span> {{hero.name}}
+            </a>
+            <button class="btn btn-danger float-right" title="delete hero" (click)="delete(hero)">Borrar</button>
+        </li>
+    </ul>
+</div>
